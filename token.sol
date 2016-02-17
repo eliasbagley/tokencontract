@@ -12,7 +12,9 @@ contract Token {
   }
 
   function redeem(uint token) returns (address) {
-    return tokenMap[token];
+    address ad = tokenMap[token]
+    tokenMap[token] = 0;
+    return ad;
   }
 
   // Private helper methods
